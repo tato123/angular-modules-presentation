@@ -1,0 +1,23 @@
+{
+  "name": "angularjs-modules-example",
+  "version": "1.0.0",
+  "description": "An example project to illustrate building a scalable angularjs project through commonjs syntax",
+  "author": "Jonathan Fontanez <fontanezj1@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.6",
+    "gulp-webserver": "^0.9.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-ui-router": "^0.2.15",
+    "lodash": "^3.10.1"
+  }
+}
