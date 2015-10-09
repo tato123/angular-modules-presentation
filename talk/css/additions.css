@@ -1,0 +1,16 @@
+.blue-slide {
+	color: #fff;
+}
+
+.ghost {
+	background-color: transparent !important;
+	border: 0px solid transparent !important;
+	box-shadow: none !important;
+}
+
+.img-block {
+	width:25%;
+	height:auto;
+	display:inline-block;
+	
+}
