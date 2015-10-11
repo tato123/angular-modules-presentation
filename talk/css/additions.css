@@ -12,7 +12,7 @@
 	width:25%;
 	height:auto;
 	display:inline-block;
-	
+
 }
 
 .chart h2{
@@ -25,4 +25,26 @@
 
 .speaker-notes {
 	font-size: 16px !important;
+}
+
+div.content-info {
+	font-size: 0.6em !important;
+	position: relative !important;
+	margin-top: 15% !important;
+	margin-left: 4% !important;
+}
+
+div.content-info.large {
+	font-size: 1.5em !important;
+}
+
+.content-info a, .content-info label {
+	display: block;
+	text-align: left;
+}
+.content-info i {
+	padding-right: 0.5em;
+}
+.fa-white {
+	color: #fff;
 }
