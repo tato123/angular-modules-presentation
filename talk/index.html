@@ -1,25 +1,20 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
 		<title>Modular, enterprise scale AngularJS</title>
-
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
+		
+		<link rel="stylesheet" href="css/additions.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		<link rel="stylesheet" href="css/additions.css">
+		
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -28,25 +23,21 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Building modular enterprise scale AngularJS applications </h1>					
+					<h1>Building modular enterprise scale AngularJS applications </h1>
 					<p>
 						<small>Jonathan Fontanez / <a href="https://twitter.com/jonfontanez">@jonfontanez</a></small>
 					</p>
 				</section>
-
 				<section>
 					<h1>Overview</h1>
 					<ul>
@@ -70,178 +61,193 @@
 						<li class="fragment">Future...</li>
 					</ul>
 				</section>
-
+				<!-- ************************
+				* WHY SECTION 
+				* *************************** -->
+				<section data-background="#1E88E5" class="center" >
+					<h1>Why?</h1>
+				</section>
 				<section>
-					<section data-background="#1E88E5" >
-						<h1>Why?</h1>
-					</section>
-					<section>
-						<h2>Why?</h2>
-						<q cite="https://en.wikipedia.org/wiki/Modularity">"The degree to which a system's components may be separated and recombined"</q>
-						<div>
+					<h2>Why?</h2>
+					<q cite="https://en.wikipedia.org/wiki/Modularity">"The degree to which a system's components may be separated and recombined"</q>
+					<div>
 						<img class="ghost fragment img-block" src="https://raw.githubusercontent.com/gmetais/YellowLabTools/master/doc/img/npm-logo.png">
 						<img class="ghost fragment img-block" src="http://bower.io/img/bower-logo.svg">
-						</div>
-						<aside class="notes">
-							So, modularity. It's defined as the degree to which a system's components may be seperated and recombined.
-
-							It means logicaly partitioning software in a manner that allows complex software to be manageable for the purpose of implementation and maintance.
-
-							This provides a means for building loosely coupled units of code. 
-
-							As web developers we see this manifest partially as libraries that we can import in our project. These libraries allow us to build more complex software. Libraries as modules are important and we have great tooling to make it easier to find, install and manage them.
-						</aside>
-					</section>
-
-					<section>
-						<h2>Why?</h2>
-
-						<div style="display:inline-block;">
-							<h4>Expectations</h4>
-							<img src="http://3dbgy741v9lb3pohku1a21j64j9.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/building-block-growth-strategy.jpg" style="width:300px;height:auto;">
-						</div>
-
-						<div class="fragment" style="display:inline-block;">
-							<h4>Reality</h4>
-							<img src="http://dpegb9ebondhq.cloudfront.net/product_photos/1636854/18_Wooden_Toy_Blocks_Bannor_Toys_original.JPG" style="width:300px;height:auto;">
-						</div>
-
-						<aside class="notes">
-							However, building modular software can be hard when we grow beyond a simple library. Simply plugging in libraries isn't enough. Single page application frameworks like AngularJS provide scaffolding to build large applications using the MVVM architectural pattern. 
-
-							AngularJS even comes with a module API that allows us to contain segments of our code. So we divide our code into controllers, services, models, etc... and as the code base begins to grow, as you attempt to implement new features, and your team grows you end up with something that looks something more like this. 
-
-							// flash picture
-
-							It's still technically a set of modules however it's not quite the nicely aligned stack that you hoped for. 
-
-						</aside>
-					</section>
-
-					
-					<section>
-						<h2>Why?</h2>
-						
-						<div>
-							<img src="/img/angular_gotcha_modules.png">
-						</div>	
-						<ul class="fragment">
-							<li>
-								<a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">Best practice for application structure</a>
-							</li>
-							<li>
-								<a href="https://github.com/johnpapa/angular-styleguide">AngularJS styleguide by John Papa (the missing styleguide)</a>
-							</li>
-						</ul>
-
-						<aside class="notes">
-							The interesting part though is the fine print on modules. While it provides you a means for containing your content for the purposes of bootstrapping, it doesn't really deal with making your code any more module then if you had written many different files of javascript and strung them together. 
-
-							If you notice they link to a sub document for organizing large AngularJS apps and that leads to two resources. Best practices on how to structure your applications, specifically how to breakout your apps and effectively build using component based feature structuring.
-
-							Additionally, the John Papa style guide, really the missing style guide that is a must read. 
-
-							And once you read each your reaction might look something like this...
-						</aside>
-
-					</section>
-					<section data-background="/img/andy_surprised.gif">
-						<aside class="notes">
-							You are provided some of the basics getting you started with building that tower of blocks.  
-						</aside>
-					</section>
-					<section>
-						<h2>Why?</h2>
-						<h4>Problem Statement</h4>
-						<p>AngularJS provides an MVVM framework. However, it does not provide tooling to build scalable(size) and maintainble software</p>
-
-						<aside class="notes">
-							// read the statement
-
-							So really the problem is AngularJS, out the box, simply gives you an MVVM framework and the tools to build a single page application.
-
-							Building large scale applications requires solid architectural decisions and consistent code styling. 
-
-							This is especially true of enterprise projects and projects where teams are highly distributed
-						</aside>
-					</section>
-
-
+					</div>
+					<aside class="notes">
+						<p>
+						So, modularity. It's defined as the degree to which a system's components may be separated and recombined.
+						</p>
+						<p>
+						It means logically partitioning software in a manner that allows complex software to be manageable for the purpose of implementation and maintenance.
+						</p>
+						<p>
+						This provides a means for building loosely coupled units of code.
+						As web developers we see this manifest partially as libraries that we can import in our project. These libraries allow us to build more complex software. Libraries as modules are important and we have great tooling to make it easier to find, install and manage them.
+						</p>
+					</aside>
 				</section>
-
-				
-
 				<section>
-					<section data-background="#FF5722">
-						<h1>Getting Started</h1>
-					</section>
-					<section>
-						<h2>Structuring Components</h2>
+					<h2>Why?</h2>
+					<div style="display:inline-block;">
+						<h4>Expectations</h4>
+						<img src="http://3dbgy741v9lb3pohku1a21j64j9.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/building-block-growth-strategy.jpg" style="width:300px;height:auto;">
+					</div>
+					<div class="fragment" style="display:inline-block;">
+						<h4>Reality</h4>
+						<img src="http://dpegb9ebondhq.cloudfront.net/product_photos/1636854/18_Wooden_Toy_Blocks_Bannor_Toys_original.JPG" style="width:300px;height:auto;">
+					</div>
+					<aside class="notes">
 						<p>
-							AngularJS sample applications focus on grouping functionality
-							<ul>
-								<li>Controller</li>
-								<li>Services</li>
-								<li>Views</li>
-								<li>etc...</li>
-							</ul>
+						However, building modular software can be hard when we grow beyond a simple library. Simply plugging in libraries isn't enough. Single page application frameworks like AngularJS provide scaffolding to build large applications using the MVVM architectural pattern.
+						AngularJS even comes with a module API that allows us to contain segments of our code. So we divide our code into controllers, services, models, etc... and as the code base begins to grow, as you attempt to implement new features, and your team grows you end up with something that looks something more like this.
 						</p>
-						<p class="fragment">Great for getting started!</p>
-
-					</section>
-					<section>
-						<h2>Structuring Components</h2>
-						<h4>LIFT</h4>
-						<ul>
-							<li>Locating our code is easy</li>
-							<li>Identify code at a glance</li>
-							<li>Flat structure as long as we can</li>
-							<li>Try to stay DRY (Don’t Repeat Yourself) or T-DRY</li>
-						</ul>					
-					</section>
-					<section>
-						<h2>Structuring Components</h2>
+						<em>// flash picture</em>
 						<p>
-							AngularJS sample applications focus on grouping functionality
-							<ul>
-								<li>Controller</li>
-								<li>Services</li>
-								<li>Views</li>
-								<li>etc...</li>
-							</ul>
+						It's still technically a set of modules however it's not quite the nicely aligned stack that you hoped for.
 						</p>
-						<p class="fragment">Great for getting started</p>
-					</section>
-					<section>
-						<h2>Writing Components</h2>
-					</section>
-					<section>
-						<h2>Testing Components</h2>
-					</section>
+					</aside>
 				</section>
+				
+				<section>
+					<h2>Why?</h2>
+					
+					<div>
+						<img src="/img/angular_gotcha_modules.png">
+					</div>
+					<ul class="fragment">
+						<li>
+							<a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">Best practice for application structure</a>
+						</li>
+						<li>
+							<a href="https://github.com/johnpapa/angular-styleguide">AngularJS styleguide by John Papa (the missing styleguide)</a>
+						</li>
+					</ul>
+					<aside class="notes">
+						<p>
+						The interesting part though is the fine print on modules. While it provides you a means for containing your content for the purposes of bootstrapping, it doesn't really deal with making your code any more module then if you had written many different files of javascript and strung them together.
+						</p>
+						<p>
+						If you notice they link to a sub document for organizing large AngularJS apps and that leads to two resources. Best practices on how to structure your applications, specifically how to breakout your apps and effectively build using component based feature structuring.
+						</p>
+						<p>
+						Additionally, the John Papa style guide, really the missing style guide that is a must read.
+						And once you read each your reaction might look something like this...
+						</p>
+					</aside>
+				</section>
+				<section data-background="/img/andy_surprised.gif">
+					<aside class="notes">
+						You are provided some of the basics getting you started with building that tower of blocks.
+					</aside>
+				</section>
+				<section>
+					<h2>Why?</h2>
+					<h4>Root of the problem</h4>
+					<p>AngularJS provides an MVVM framework. It does not natively include the capability to build scalable and maintainable software</p>
+					<aside class="notes">
+						// read the statement
+						<p>
+						AngularJS is simply a framework that provides you the basic design patterns and utilities to build single page applications. It makes no decisions for you on how to put things together. 
+						</p>
+						<p>
+						Building applications that are scalable, in terms of size and development effort, as well as maintainable require solid architectural decisions and consistent code styling.						
+						</p>
+						<p>
+							Understanding the strengths of the framework and the boundaries allow us to make effective and efficient decisions. This allows us to focus on building better software. 
+						</p>
+					</aside>
+				</section>
+				<!-- ************************
+				* Getting started SECTION 
+				* *************************** -->
+				<section data-background="#FF5722" class="center">
+					<h1>Getting Started</h1>										
+				</section>
+		
+				<section class="center">
+					<h3>What are we going to build?</h3>
+					<p>
+						Simple <a href="https://developers.google.com/apis-explorer/#p/" target="_blank">Google like API explorer</a>
+					</p>	
+					<div>
+					<img src="http://image.slidesharecdn.com/angularjs-140314090851-phpapp02/95/introduction-to-angularjs-12-638.jpg?cb=1394789737">
+					</div>
+					<small style="font-size:10px;">Credit to <a href="http://www.slideshare.net/AldoPizzagalli?utm_campaign=profiletracking&utm_medium=sssite&utm_source=ssslideview">Aldo Pizzagalli</a></small>
+					<aside class="notes">
+						<p>
+						As part of Getting Started we will go over the architectural decisions and design patterns to build modular code that will allow us to scale and extend over time
+						</p>
+					</aside>				
+				</section>
+				<section>
+					<h2>Structuring Components</h2>
+					<p>
+						AngularJS sample applications focus on grouping functionality
+						<ul>
+							<li>Controller</li>
+							<li>Services</li>
+							<li>Views</li>
+							<li>etc...</li>
+						</ul>
+					</p>
+					<p class="fragment">Great for getting started!</p>
+				</section>
+				<section>
+					<img style="width:75%;height:auto;margin-top:-15px;" class="ghost img-block" src="img/old_filestructure_angularjs.svg">
+				</section>
+				<section>
+					<h2 style="margin-bottom:1em;">Structuring Components</h2>
+					<h4 style="text-align:left;margin-left:90px;">LIFT <span style="font-size:0.6em;">[Style <a href="https://github.com/johnpapa/angular-styleguide#style-y140">Y140</a>]</span></h4>
 
+					<ul>
+						<li>Locating our code is easy</li>
+						<li>Identify code at a glance</li>
+						<li>Flat structure as long as we can</li>
+						<li>Try to stay DRY (Don’t Repeat Yourself) or T-DRY</li>
+					</ul>
+				</section>
+				<section>
+					<img style="width:100%;height:auto;margin-top:-15px;" class="ghost img-block" src="img/new_filestructure_angularjs.svg">
+				</section>				
+			
+				<section>
+					<h3>Designing our app</h3>
+					<img src="img/service-browse.png">
+					<img src="img/service-operations.png">
+				</section>
+					<section>
+					<h2>Why are we using require statements in our code?</h2>
+					<ul>
+						<li>AngularJS module statements specify how an application should be bootstrapped.</li>
+						<li>Module statements declare what is required but do not specify how to satisfy those requirements</li>
+						<li>Each module statement requires a corresponding &lt;script&gt; statement (very difficult with large development teams)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Writing Components</h2>
+				</section>
+				<section>
+					<h2>Testing Components</h2>
+				</section>
 				<section>
 					<section data-background="#FF5722">
 						<h1>Package</h1>
 					</section>
 				</section>
-
 				<section>
 					<section data-background="#FF5722">
 						<h1>Maintain / Extend</h1>
 					</section>
 				</section>
-
-	
+				
 			</div>
-
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/jquery-orgchart/jquery.orgchart.js"></script>
 		<script>
-
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -249,9 +255,7 @@
 				progress: true,
 				history: true,
 				center: false,
-
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -262,8 +266,7 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
 		</script>
-
+		
 	</body>
 </html>

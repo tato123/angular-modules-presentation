@@ -14,3 +14,15 @@
 	display:inline-block;
 	
 }
+
+.chart h2{
+	color: black;
+}
+
+.chart .lines, .chart .line {
+	border-color: #fff !important;
+}
+
+.speaker-notes {
+	font-size: 16px !important;
+}

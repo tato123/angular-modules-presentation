@@ -4,11 +4,13 @@ var angular = require('angular');
 
 angular
 	.module('ae', [
-		require('angular-ui-router'), 
-		require('./api-list'),
-		require('./api-service-browse'),
-		require('./api-registry')
-	]);
+		require('angular-ui-router'), 		
+		require('../browse'),
+		require('../registry'),
+		require('../operations'),
+		require('../api-foo')
+	])
+	.config( require('./routes') );
 
 angular
     .element(document)

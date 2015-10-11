@@ -1,0 +1,22 @@
+<div style="margin-top:10px;">
+	<div>
+		<a ui-sref="app.services">Services</a> > Operations
+	</div>
+	<div style="margin-top:20px;">
+		<table>
+			<tbody>
+				<tr ng-repeat="operation in service.operations">
+					<td>
+						<label>{{operation.name}}</label>
+					</td>
+					<td>
+						<label>{{operation.description}}</label>
+					</td>
+					<td>
+						<label class="box">{{operation.verb}}</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

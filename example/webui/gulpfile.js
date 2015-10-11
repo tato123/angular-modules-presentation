@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 
 // add custom browserify options here
 var customOpts = {
-    entries: ['./app/components/app.js'],
+    entries: ['./app/components/app/index.js'],
     debug: true
 };
 var opts = assign({}, watchify.args, customOpts);

@@ -2,5 +2,5 @@
 
 module.exports = angular
 	.module('ae.registry', [])
-	.provider('apiRegistry', require('./api-registry-provider'))
+	.provider('apiRegistry', require('./registry-provider'))
 	.name;

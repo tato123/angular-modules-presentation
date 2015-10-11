@@ -1,0 +1,17 @@
+<div>
+	<table>
+		<tbody>
+			<tr ng-repeat="api in apis" ui-sref="app.services.operations({id:api.id})">
+				<td></td>
+				<td>{{api.name}}</td>
+				<td>{{api.version}}</td>
+				<td>{{api.description}}</td>
+			</tr>
+			<tr ng-show="apis.length === 0">
+				<td colspan="4">
+					<label>No APIs currently registered</label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
