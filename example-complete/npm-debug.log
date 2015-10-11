@@ -1,0 +1,51 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/jonathanfontanez/.nvm/v0.10.40/bin/node',
+1 verbose cli   '/Users/jonathanfontanez/.nvm/v0.10.40/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.40
+4 warn package.json angularjs-modules-example@1.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git',
+6 verbose cache add   null ]
+7 verbose cache add name=undefined spec="https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git" args=["https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git",null]
+8 verbose parsed url { protocol: 'https:',
+8 verbose parsed url   slashes: true,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: 'github.com',
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: 'github.com',
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '/tato123/angular-modules-presentation/tree/master/example/echoapi.git',
+8 verbose parsed url   path: '/tato123/angular-modules-presentation/tree/master/example/echoapi.git',
+8 verbose parsed url   href: 'https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git' }
+9 silly lockFile a8b3a1d6--tree-master-example-echoapi-git https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+10 verbose lock https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git /Users/jonathanfontanez/.npm/a8b3a1d6--tree-master-example-echoapi-git.lock
+11 verbose addRemoteTarball [ 'https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git',
+11 verbose addRemoteTarball   null ]
+12 info retry fetch attempt 1 at 19:02:49
+13 verbose fetch to= /var/folders/74/p6hg0qjn4rd3y6794nh9nzdc0000gn/T/npm-12669-iYNLEgqE/github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+14 http GET https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+15 http 404 https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+16 error fetch failed https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+17 silly lockFile a8b3a1d6--tree-master-example-echoapi-git https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+18 silly lockFile a8b3a1d6--tree-master-example-echoapi-git https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git
+19 error Error: 404 Not Found
+19 error     at WriteStream.<anonymous> (/Users/jonathanfontanez/.nvm/v0.10.40/lib/node_modules/npm/lib/utils/fetch.js:58:12)
+19 error     at WriteStream.emit (events.js:117:20)
+19 error     at evalmachine.<anonymous>:1610:14
+19 error     at /Users/jonathanfontanez/.nvm/v0.10.40/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+19 error     at Object.oncomplete (evalmachine.<anonymous>:108:15)
+20 error If you need help, you may report this *entire* log,
+20 error including the npm and node versions, at:
+20 error     <http://github.com/npm/npm/issues>
+21 error System Darwin 14.5.0
+22 error command "/Users/jonathanfontanez/.nvm/v0.10.40/bin/node" "/Users/jonathanfontanez/.nvm/v0.10.40/bin/npm" "install" "--save" "https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi.git"
+23 error cwd /Users/jonathanfontanez/Repositories/Github/angular-modules-presentation/example/webui
+24 error node -v v0.10.40
+25 error npm -v 1.4.28
+26 verbose exit [ 1, true ]
