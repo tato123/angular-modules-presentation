@@ -13,12 +13,11 @@
     "gulp-webserver": "^0.9.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.4.0"
-  },
-  "dependencies": {
+    "watchify": "^3.4.0",
+    "lodash.assign": "^3.2.0",
+    "lodash": "^3.10.1",
     "angular": "^1.4.7",
     "angular-ui-router": "^0.2.15",
-    "lodash": "^3.10.1",
     "uuid": "^2.0.1"
   }
 }

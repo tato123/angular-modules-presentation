@@ -1,0 +1,22 @@
+{
+  "name": "echoapi",
+  "version": "1.0.0",
+  "description": "An additional echo based api service we want to include as part of our angular api explorer sample",
+  "main": "dist/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tato123/angular-modules-presentation/tree/master/example/echoapi"
+  },
+  "author": "Jonathan Fontanez <fontanezj1@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.6",
+    "lodash.assign": "^3.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
