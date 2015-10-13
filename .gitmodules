@@ -1,0 +1,3 @@
+[submodule "angular-modules-echoapi"]
+	path = angular-modules-echoapi
+	url = https://github.com/tato123/angular-modules-echoapi
