@@ -17,15 +17,15 @@ function fooConfig(apiRegistryProvider) {
 			}, {
 				name: 'adexchangebuyer.accounts.get',
 				description: 'Gets one account by id',
-				verb: 'GET'
+				verb: 'POST'
 			}, {
 				name: 'adexchangebuyer.accounts.get',
 				description: 'Gets one account by id',
-				verb: 'GET'
+				verb: 'PUT'
 			}, {
 				name: 'adexchangebuyer.accounts.get',
 				description: 'Gets one account by id',
-				verb: 'GET'
+				verb: 'DELETE'
 			}]
 		})
 		.register({
@@ -43,5 +43,5 @@ function fooConfig(apiRegistryProvider) {
 				verb: 'PUT'
 			}]
 		});
-	
+
 }

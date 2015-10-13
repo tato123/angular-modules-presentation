@@ -20,7 +20,8 @@ var gulp = require('gulp'),
 // add custom browserify options here
 var customOpts = {
     entries: ['./app/components/app/index.js'],
-    debug: true
+    debug: true,
+    paths: ['./node_modules']
 };
 var opts = assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
@@ -54,15 +55,15 @@ function bundle() {
  */
 gulp.task('clean', function(cb) {
     del([
-        'app/js/*',        
+        'app/js/*',
     ], cb);
 });
 
 /**
- * @description 
+ * @description
  * Handle compiling the javascript using browserify
  */
-gulp.task('browserify', bundle); 
+gulp.task('browserify', bundle);
 
 
 // wrapper around our typescript compile and clean

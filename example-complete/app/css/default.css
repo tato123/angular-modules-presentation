@@ -58,7 +58,7 @@ tr:hover td:first-child {
 tr:hover td {
 	background-color: #f1f1f1;
 	cursor: pointer;
-	
+
 }
 
 a {
@@ -70,7 +70,32 @@ a.active {
 }
 
 .box {
-	padding: 10px;
-	background-color: green;
+	padding: 5px;
+	font-size:12px;
+	font-weight: bold;
+	background-color: #66BB6A;
 	border-radius: 4px;
+	width: 75px;
+	display: block;
+	text-align: center;
+}
+
+.box.POST {
+	background-color: #29B6F6;
+	color:#ffffff;
+}
+
+.box.PUT {
+	background-color: #AB47BC;
+	color:#ffffff;
+}
+
+.box.DELETE {
+	background-color: #ef5350;
+	color:#ffffff;
+}
+
+.box.GET {
+	background-color: #66BB6A;
+	color:#ffffff;
 }

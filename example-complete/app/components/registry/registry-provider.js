@@ -6,7 +6,6 @@ module.exports = RegistryProvider;
 
 function RegistryProvider() {
 	
-	var uuid = require('uuid');
 	var _ = require('lodash');
 
 	var apis = [];
@@ -22,17 +21,17 @@ function RegistryProvider() {
 
 	function factory($q) {
 
-		return { 
+		return {
 			get : get
 		};
 
 		function get(id) {
 			if ( _.isUndefined(id) ) {
-				return $q.when(apis);	
+				return $q.when(apis);
 			}
 
 			return $q.when( _.find(apis, {id:id}) );
-			
+
 		}
 	}
 }
