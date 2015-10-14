@@ -1,40 +1,3 @@
-# AngularJS Modules Example Complete
-
-## Overview
-
-This is the sample project in its completed form that corresponds to the angular-modules-presentation
-
-## Install
-
-You will need gulp installed globally in order to completly install the project. Gulp is used to automate the installation of the typescript definitions as well as handle compilation and file serving
-
-`npm install -g gulp`
-
-Once that is complete, run the default npm install command
-
-`npm install`
-
-Assuming that everything has completed succesfully you should see the node_modules directory 
-
-## Running the Project
-
-Gulp is used to run the project,
-
-If the project does not open automatically in your default browser, you can navigate to the address:
-
-http://localhost:9001/
-
-after starting the server.
-
-### Run Command
-
-Just run gulp in the project root, everything should execute
-
-`gulp`
-
-
-## License
-
 The MIT License (MIT)
 
 Copyright (c) 2015 Jonathan
@@ -56,3 +19,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+

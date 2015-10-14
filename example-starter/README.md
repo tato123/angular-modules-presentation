@@ -14,7 +14,7 @@ Once that is complete, run the default npm install command
 
 `npm install`
 
-Assuming that everything has completed succesfully you should see the node_modules directory 
+Assuming that everything has completed succesfully you should see the node_modules directory
 
 ## Running the Project
 

@@ -20,6 +20,7 @@ function browseCtrl($scope, apiRegistry, $log) {
 					c.push(item);
 					return c;
 				}, $scope.apis);
+				services = null;
 			})
 			.catch(function(error) {
 				$log.error('Unable to get all services');

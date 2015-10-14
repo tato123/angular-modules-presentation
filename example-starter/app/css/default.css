@@ -1,0 +1,101 @@
+
+body {
+	font-family: Arial,Helvetica,sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 1rem;
+	line-height: 1.2;
+}
+
+.header {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+}
+
+.header label {
+	color: #dd4b39;
+	font-size: 150%;
+}
+
+.left-column {
+	width: 10%;
+	padding: 10px;
+	float: left;
+}
+.left-column > div {
+	padding-top: 10px;
+}
+.right-column {
+	width: 80%;
+	padding: 10px;
+	float: left;
+}
+
+table {
+	width: 100%;
+}
+
+tbody tr {
+	border-bottom: 1px solid #e5e5e5;
+
+}
+
+tbody td {
+	padding: 10px;
+
+}
+
+tr td:first-child {
+	border-left: 3px solid transparent;
+}
+
+tr:hover td:first-child {
+	border-left: 3px solid #e5e5e5;
+}
+
+tr:hover td {
+	background-color: #f1f1f1;
+	cursor: pointer;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+a.active {
+	color: #dd4b39;
+}
+
+.box {
+	padding: 5px;
+	font-size:12px;
+	font-weight: bold;
+	background-color: #66BB6A;
+	border-radius: 4px;
+	width: 75px;
+	display: block;
+	text-align: center;
+}
+
+.box.POST {
+	background-color: #29B6F6;
+	color:#ffffff;
+}
+
+.box.PUT {
+	background-color: #AB47BC;
+	color:#ffffff;
+}
+
+.box.DELETE {
+	background-color: #ef5350;
+	color:#ffffff;
+}
+
+.box.GET {
+	background-color: #66BB6A;
+	color:#ffffff;
+}

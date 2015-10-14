@@ -5,14 +5,7 @@ var angular = require('angular');
 angular
 	.module('ae', [
 		// external libs
-		require('angular-ui-router'),
-		require('echoapi'),
-		// internal moduels
-		require('./browse'),
-		require('./registry'),
-		require('./operations'),
-		require('./api-foo')
-
+		require('angular-ui-router')
 	])
 	.config( require('./app/routes') );
 
