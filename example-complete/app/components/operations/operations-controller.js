@@ -8,7 +8,7 @@ function operationsCtrl($scope, $stateParams, apiRegistry, $log) {
 	$scope.service = undefined;
 
 	function getAllOperations() {
-		
+
 		if ( !_.has($stateParams, 'id') || _.isUndefined($stateParams.id) ) {
 			throw new Error('State params [id] was not provided');
 		}
@@ -27,4 +27,12 @@ function operationsCtrl($scope, $stateParams, apiRegistry, $log) {
 	}
 
 	activate();
-}	
+
+	$scope.$on('$destroy', function() {
+			// destroy our reference to prevent a memory leak
+			// due to ng-repeat
+			$scope.service = null;
+			delete $scope.service;
+	});
+
+}

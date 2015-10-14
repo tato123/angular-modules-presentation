@@ -4,12 +4,17 @@ module.exports = browseCtrl;
 
 var _ = require('lodash');
 
+/**
+* @description
+* Browse controller is responsible for the layout and display
+* of all of the available api services
+*/
 function browseCtrl($scope, apiRegistry, $log) {
 
 	$scope.apis = [];
 
 	function getServices() {
-		apiRegistry.get() 
+		apiRegistry.get()
 			.then(function(services) {
 				_.reduce(services, function(c, item) {
 					c.push(item);
@@ -17,7 +22,7 @@ function browseCtrl($scope, apiRegistry, $log) {
 				}, $scope.apis);
 			})
 			.catch(function(error) {
-				$log.error('Unable to get all services', error);
+				$log.error('Unable to get all services');
 			})
 	}
 
