@@ -11,16 +11,12 @@ var _ = require('lodash');
 */
 function browseCtrl($scope, apiRegistry, $log) {
 
-	$scope.apis = [];
+	$scope.apis = null;
 
 	function getServices() {
 		apiRegistry.get()
 			.then(function(services) {
-				_.reduce(services, function(c, item) {
-					c.push(item);
-					return c;
-				}, $scope.apis);
-				services = null;
+				$scope.apis = services;
 			})
 			.catch(function(error) {
 				$log.error('Unable to get all services');
@@ -33,4 +29,7 @@ function browseCtrl($scope, apiRegistry, $log) {
 
 	activate();
 
+	$scope.$on('$destroy', function() {
+		$scope.apis = null;
+	});
 }

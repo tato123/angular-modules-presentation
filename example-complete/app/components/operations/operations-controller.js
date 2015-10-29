@@ -5,7 +5,7 @@ module.exports = operationsCtrl;
 function operationsCtrl($scope, $stateParams, apiRegistry, $log) {
 
 	var _ = require('lodash');
-	$scope.service = undefined;
+	$scope.service = null;
 
 	function getAllOperations() {
 
@@ -30,9 +30,7 @@ function operationsCtrl($scope, $stateParams, apiRegistry, $log) {
 
 	$scope.$on('$destroy', function() {
 			// destroy our reference to prevent a memory leak
-			// due to ng-repeat
 			$scope.service = null;
-			delete $scope.service;
 	});
 
 }
